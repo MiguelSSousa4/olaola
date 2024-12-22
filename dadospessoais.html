@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../lib/font-awesome/dist/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <title>Registro de Dados Pessoais</title>
+    <style>
+        .custombutton {
+            margin: 10px 0;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #D80709;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+            .custombutton:hover {
+                background-color: #a60607;
+            }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-expand-md" style="background-color: #D80709; justify-content: space-between; height: 50px; border-bottom: solid; border-bottom-color: black">
+        <div class="navbar-nav mx-auto">
+            <div class="logo"></div>
+        </div>
+
+    </div>
+    <div style="display: flex; justify-content: center; height: 100px;">
+        <div class="form-container">
+            <div style="height:100px"></div>
+            <form class="custombox" id="dadosPessoaisForm" onsubmit="handleDadosPessoais(event)">
+                <div style="font-size: 15px; font-weight: bold; margin-bottom: 15px;">Insira seus dados pessoais</div>
+
+                <div class="input-wrapper">
+                    <i class="fa fa-arrows-v"></i>
+                    <input class="input custominputbox" name="altura" id="altura" placeholder="Altura" type="text">
+                    <span class="unit">m</span>
+                    <div id="alturaError" class="error-message"></div>
+                </div>
+
+                <div class="input-wrapper">
+                    <i class="fa fa-balance-scale"></i>
+                    <input class="input custominputbox" name="peso" id="peso" placeholder="Peso" type="text">
+                    <span class="unit">kg</span>
+                    <div id="pesoError" class="error-message"></div>
+                </div>
+
+                <div class="input-wrapper">
+                    <i class="fa fa-calendar"></i>
+                    <input class="input custominputbox" name="idade" id="idade" placeholder="Idade" type="text">
+                    <div id="idadeError" class="error-message"></div>
+                </div>
+
+                <div class="input-wrapper">
+                    <i class="fa fa-cutlery"></i>
+                    <select class="input custominputbox" name="restricoes-alimentares" id="restricoes-alimentares">
+                        <option value="Restrições Alimentares">Restrições Alimentares</option>
+                        <option value="nenhuma">Nenhuma</option>
+                        <option value="vegetariano">Vegetariano</option>
+                        <option value="vegano">Vegano</option>
+                        <option value="gluten">Intolerância ao Glúten</option>
+                        <option value="lactose">Intolerância à Lactose</option>
+                    </select>
+                    <div id="restricoesAlimentaresError" class="error-message"></div>
+                </div>
+
+                <div class="input-wrapper">
+                    <i class="fa fa-wheelchair"></i>
+                    <select class="input custominputbox" name="restricoes-fisicas" id="restricoes-fisicas">
+                        <option value="Restrições Físicas">Restrições Físicas</option>
+                        <option value="nenhuma">Nenhuma</option>
+                        <option value="lesao">Lesão</option>
+                        <option value="cirurgia">Cirurgia Recente</option>
+                        <option value="doenca">Doença Crônica</option>
+                    </select>
+                    <div id="restricoesFisicasError" class="error-message"></div>
+                </div>
+
+                <button class="custombutton" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle -->
+    <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function handleDadosPessoais(event) {
+            event.preventDefault();
+            const altura = event.target.altura.value;
+            const peso = event.target.peso.value;
+            const idade = event.target.idade.value;
+
+            if (!altura || !peso || !idade) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            // Aqui você pode adicionar a lógica para salvar os dados pessoais, se necessário
+            alert("Dados pessoais enviados com sucesso!");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

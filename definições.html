@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../lib/font-awesome/dist/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <title>Definições</title>
+    <style>
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px; /* Espaçamento entre os botões */
+        }
+
+        .custombutton {
+            width: 200px; /* Largura dos botões */
+            height: 50px; /* Altura dos botões */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-expand-md" style="background-color: #D80709; justify-content: space-between; height: 50px; border-bottom: solid; border-bottom-color: black">
+        <div class="navbar-nav mx-auto">
+            <div class="logo"></div>
+        </div>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="definições.html" style="color: white;">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; height: 100px; margin-top: 50px;">
+        <div class="form-container">
+            <button class="custombutton" onclick="window.location.href='dadospessoais.html'">Atualizar Informações</button>
+            <button class="custombutton" onclick="sairAplicacao()">Sair</button>
+        </div>
+    </div>
+
+    <script>
+        function sairAplicacao() {
+            // Limpar dados do local storage e redirecionar para a página de login
+            
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
+
+
+
+

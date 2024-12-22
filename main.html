@@ -1,0 +1,390 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="index.css" rel="stylesheet" />
+    <title>Element Fitness</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-expand-md" style="background-color: #D80709; justify-content: space-between; height: 50px; border-bottom: solid; border-bottom-color: black">
+        <div class="navbar-nav mx-auto">
+            <div class="logo"></div>
+        </div>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="definições.html" style="color: white;">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- form -->
+    <div class="row" style="height: 50px"></div>
+
+    <!-- Adicione este elemento onde deseja exibir o nome do usuário -->
+    <div id="userName"></div>
+
+    <div style="display: flex; justify-content: center; height: 250px;">
+        <div class="custombox" style=" width: 300px; height: 250px;">
+            <div style="font-size: 25px; font-weight: bold">Treinos Agendados</div>
+            <div id="agendamentosContainer" style="margin-top: 15px;"></div>
+        </div>
+    </div>
+
+
+
+    <!-- plano de treinos -->
+    <div style="height: 15px"></div>
+    <div style="display: flex; justify-content: center; height: 500px;">
+        <div class="custombox" style=" width: 300px; height: 500px;">
+            <div style="font-size: 25px; font-weight: bold">Plano de Treinos</div>
+            <div style="height: 15px"></div>
+            <!-- Esteira -->
+            <div class="row" style="height: 50px">
+                <div class="col-2" style="align-content: center; align-items: center">
+                    <img src="esteira.png" height="50" />
+                </div>
+                <div class="col-6" style="align-content:center;">
+                    Esteira
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    25 min
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    10 km/h
+                </div>
+            </div>
+
+            <!-- Bicep Curl -->
+            <div class="row" style="height: 50px">
+                <div class="col-2" style="align-content: center; align-items: center">
+                    <img src="bicep-curl.png" width="50" />
+                </div>
+                <div class="col-6" style="align-content:center;">
+                    Bicep Curl
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px ">
+                    3x15
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    12kg
+                </div>
+            </div>
+
+            <!-- Supino -->
+            <div class="row" style="height: 50px">
+                <div class="col-2" style="align-content: center; align-items: center">
+                    <img src="supino.png" style="width: 40px" />
+                </div>
+                <div class="col-6" style="align-content:center;">
+                    Supino
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    3x10
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    150kg
+                </div>
+            </div>
+
+            <!-- Leg Press -->
+            <div class="row" style="height: 50px">
+                <div class="col-2" style="align-content: center; align-items: center">
+                    <img src="leg-press.png" width="50" />
+                </div>
+                <div class="col-6" style="align-content:center;">
+                    Leg Press
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    3x12
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    50kg
+                </div>
+            </div>
+
+            <!-- Polichinelos -->
+            <div class="row" style="height: 50px">
+                <div class="col-2" style="align-content: center; align-items: center">
+                    <img src="polichinelos.png" height="50" />
+                </div>
+                <div class="col-6" style="align-content:center;">
+                    Polichinelos
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    3x20
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    ---
+                </div>
+            </div>
+
+            <!-- Pulley Articulado -->
+            <div class="row" style="height: 50px">
+                <div class="col-2" style="align-content: center; align-items: center">
+                    <img src="pulley-articulado.png" height="40" />
+                </div>
+                <div class="col-6" style="align-content:center;">
+                    Pulley Articulado
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    3x15
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    30kg
+                </div>
+            </div>
+
+            <!-- Flexões -->
+            <div class="row" style="height: 50px">
+                <div class="col-2" style="align-content: center; align-items: center">
+                    <img src="flexoes.png" width="50" />
+                </div>
+                <div class="col-6" style="align-content:center;">
+                    Flexões
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    3x15
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    ---
+                </div>
+            </div>
+
+            <!-- Agachamento com Barra -->
+            <div class="row" style="height: 50px">
+                <div class="col-2" style="align-content: center; align-items: center">
+                    <img src="agachamento-com-barra.png" width="40" />
+                </div>
+                <div class="col-6" style="align-content:center;">
+                    Agachamento com Barra
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    3x12
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    30kg
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!--  -->
+    <div style="height:15px"></div>
+    <!-- plano de dietas -->
+    <div style="display: flex; justify-content: center; height: 700px;">
+        <div class="custombox" style=" width: 300px; height: 700px;">
+            <div style="font-size: 25px; font-weight: bold">Dieta</div>
+
+            <!-- Pequeno almoço -->
+            <div style="height: 15px"></div>
+            <div style="font-size: 12px; font-weight: bold">Pequeno Almoço</div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-2" style="align-content: center;">Peso</div>
+                <div class="col-4" style="align-content: center;">Proteínas</div>
+                <div class="col-2" style="align-content: center;">Kcal</div>
+            </div>
+            <div class="row" style="height: 50px">
+                <div class="col-4" style="font-size: 10px">Tosta Integral Com Queijo Ricota</div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    100g
+                </div>
+                <div class="col-4" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    6g
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    174
+                </div>
+            </div>
+            <div class="row" style="height: 50px">
+                <div class="col-4" style="font-size: 10px">Iogurte Grego</div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    150g
+                </div>
+                <div class="col-4" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    9g
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    80
+                </div>
+            </div>
+            <div class="row" style="height: 50px">
+                <div class="col-4" style="font-size: 10px">Ovo Cozido</div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    4u
+                </div>
+                <div class="col-4" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    16g
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    620
+                </div>
+            </div>
+
+            <!-- almoço -->
+            <div style="height: 15px"></div>
+            <div style="font-size: 12px; font-weight: bold">Almoço</div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-2" style="align-content: center;">Peso</div>
+                <div class="col-4" style="align-content: center;">Proteínas</div>
+                <div class="col-2" style="align-content: center;">Kcal</div>
+            </div>
+            <div class="row" style="height: 50px">
+                <div class="col-4" style="font-size: 10px">Frango Grelhado</div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    150g
+                </div>
+                <div class="col-4" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    40.5g
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    219
+                </div>
+            </div>
+            <div class="row" style="height: 50px">
+                <div class="col-4" style="font-size: 10px">Quinoa</div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    150g
+                </div>
+                <div class="col-4" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    6.6g
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    180
+                </div>
+            </div>
+            <div class="row" style="height: 50px">
+                <div class="col-4" style="font-size: 10px">Ovo Cozido</div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    4u
+                </div>
+                <div class="col-4" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    16g
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    620
+                </div>
+            </div>
+
+            <!-- janta -->
+            <div style="height: 15px"></div>
+            <div style="font-size: 12px; font-weight: bold">Janta</div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-2" style="align-content: center;">Peso</div>
+                <div class="col-4" style="align-content: center;">Proteínas</div>
+                <div class="col-2" style="align-content: center;">Kcal</div>
+            </div>
+            <div class="row" style="height: 50px">
+                <div class="col-4" style="font-size: 10px">Tosta Integral Com Queijo Ricota</div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    100g
+                </div>
+                <div class="col-4" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    6g
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    174
+                </div>
+            </div>
+            <div class="row" style="height: 50px">
+                <div class="col-4" style="font-size: 10px">Iogurte Grego</div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    150g
+                </div>
+                <div class="col-4" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    9g
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    80
+                </div>
+            </div>
+            <div class="row" style="height: 50px">
+                <div class="col-4" style="font-size: 10px">Ovo Cozido</div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    4u
+                </div>
+                <div class="col-4" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    16g
+                </div>
+                <div class="col-2" style="align-content: center; border-left: solid 1px; font-size: 12px">
+                    620
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <button class="custombutton" onclick="location.href='treinadores.html'">Agendar Treino</button>
+    </div>
+
+    <!--  -->
+    <div style="height:50px"></div>
+    <!-- Bootstrap Bundle -->
+    <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Adicione este script antes do fechamento da tag </body> -->
+    <!-- Adicione este script antes do fechamento da tag </body> -->
+    <!-- Adicione um botão de remoção para cada agendamento -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const email = localStorage.getItem("loggedInUser");
+            if (!email) {
+                alert("Você precisa estar logado para ver os treinos agendados!");
+                return;
+            }
+
+            const agendamentos = JSON.parse(localStorage.getItem(email + "_agendamentos")) || [];
+            const container = document.getElementById("agendamentosContainer");
+
+            if (agendamentos.length === 0) {
+                container.innerHTML = "<div>Não há treinos agendados</div>";
+            } else {
+                agendamentos.forEach((agendamento, index) => {
+                    const div = document.createElement("div");
+                    div.innerHTML = `Treino agendado para ${agendamento.data} às ${agendamento.hora}
+                                     <button onclick="removerAgendamento(${index})">Remover</button>`;
+                    container.appendChild(div);
+                });
+            }
+
+            // Exibir o nome do usuário
+            const userName = localStorage.getItem("userName");
+            if (userName) {
+                document.getElementById("userName").innerText = `Bem-vindo, ${userName}!`;
+            }
+        });
+
+        function removerAgendamento(index) {
+            const email = localStorage.getItem("loggedInUser");
+            const agendamentos = JSON.parse(localStorage.getItem(email + "_agendamentos")) || [];
+            agendamentos.splice(index, 1);
+            localStorage.setItem(email + "_agendamentos", JSON.stringify(agendamentos));
+            location.reload();
+        }
+    </script>
+
+
+
+
+
+</body>
+</html >
+
+
+
